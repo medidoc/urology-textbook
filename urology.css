@@ -1,0 +1,327 @@
+html { 
+  box-sizing: border-box; 
+  background: #d5d5d5;	
+} 
+
+*, ::before, ::after { 
+  box-sizing: inherit; 
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/lato-v16-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Lato Regular'), local('Lato-Regular'),
+       url('/fonts/lato-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/lato-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/lato-v16-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/lato-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/lato-v16-latin-regular.svg#Lato') format('svg'); /* Legacy iOS */
+}
+body {
+	max-width: 70em;
+	margin:0 auto;
+	padding: 0;
+	background: #fff;	
+	color: #333; 
+	font-family: Lato;
+        font-size: 1.2em;
+}
+header {
+	position: relative;		
+	height: 210px;
+	margin: 2em  0  0 3em;
+	background: #777 url("urologie-titel.jpg") no-repeat right; 
+	background-size: contain; 			 
+	padding: 0 0 0.5em;
+	grid-area: header;
+	order: 1;
+}
+
+header a h5,
+header a p {			
+	color: white; 
+	border-left: 0;
+	padding: 0;
+    display: table;		/* Überschriften und Absätze sind sonst immer 100% breit, durch display:table und display: inline-block; für das Elternelement a.ribbon wird das Banner nur so breit wie nötig. */
+}
+#logo{
+border-top: 0px;
+border-bottom: 2px;
+}
+
+header h5{
+font-size:1.6em;
+padding:0.5em;
+margin:1em 0 1em;
+}
+
+.ribbon {
+	display: inline-block;
+	position: relative;	
+	margin: 2em 0 2em -1.5em;
+	padding: 0.5em 1em;
+	background: #4e7a92;
+	box-shadow: 0px 1px 3px rgba(0,0,0,.8);
+}
+ 
+.ribbon::before{
+	display: block;
+	width: 1.5em;
+	height: 0;
+	position: absolute;
+	bottom: -1.5em;
+	left: 0em;
+	content: "";
+	border-bottom: 1.5em solid transparent;
+	border-right: 1.5em solid rgb(0, 80, 116);
+}
+ 
+/** CONTENT **/
+
+main {
+	margin: 0 0 1em;
+	padding: 1em;
+	background: #fff;
+	display: grid;	
+	grid-gap: 2em 2em;  
+   	grid-template-columns: 1fr;
+   	grid-template-areas: "header" "article" "nav" "aside" "footer" ;
+}
+
+h1{border-top:3px solid #ccc;border-bottom:3px solid #ccc;color:#666;font-family:sans-serif;font-size:1.6em;padding:0.3em;margin:2em 0 2em}
+h2{border-bottom:2px solid #ccc;color:#666;font-family:sans-serif;font-size:1.4em;padding:0.2em;margin:1.5em 0 1.5em}
+h3{border-bottom:1px solid #ccc;color:#666;font-family:sans-serif;font-size:1.2em;padding:0.1em;margin:1em 0 1em}
+h4{color:#666;font-size:1.2em;padding:0.1em;margin:0.1em; 0 0.1em;}
+h5,h6{color:#666;font-size:1em;padding:0.1em;margin:0.1em; 0 0.1em;}
+
+p {
+	text-align: left; 
+	line-height: 1.6em; 
+	padding: 0 0 0.2em 0;
+}
+
+#brotkrumen{
+padding:0.2em 0 0.2em 0;
+background-color:#f8f8f8;
+}
+
+ul {
+line-height: 1.6em; 
+}
+
+a 	{ 
+	color: #4e7a92; 
+	outline: none; 
+	text-decoration: none; 
+}
+a:hover, 			/* Durch Maus oder Tastatur angewählte Verweise werden sichtbar gemacht */
+a:focus { 
+	color: white; 
+	text-decoration: none; 
+	background-color: #4e7a92;	
+}
+
+a.more	{ 
+	float: right; 
+	font-weight: bold; 
+}
+
+a.more:after{
+	content:" \2192 ";
+	font-size:1.2em;
+	font-weight:bold;
+}
+
+ul.square {
+	list-style-type:square;
+    color: #999999;
+    margin: 0 0 0.5em 0.5em;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+ul.square li{
+	padding:10px;	
+}
+
+/*DL, DT, DD Datenliste*/
+dl.grid { 
+  display: grid; 
+  grid-template-columns: 1fr 100%; 
+}
+dd { 
+  margin: 0; 
+  padding-left: 1em; 
+}
+
+dd span:first-child {
+  display: inline-block;
+  width: 4em;
+}
+
+dl.grid dd {
+  margin-bottom: 1em;
+}
+
+a[href^="tel"] { white-space: nowrap; }
+
+ul#footer-nav li { 
+	list-style-type: none;  
+	display: inline;
+	padding: 0 0.5em; 
+	border-right: 1px  solid #ACACAC; 
+}
+
+footer {
+	display: grid;
+        grid-template-columns: repeat(2, 1fr);	
+	padding: 1em;
+	background-color:#f8f8f8;
+	grid-area: footer;
+	order: 5;
+}
+
+ul#footer-nav  li:last-child { 
+	border: none; 
+}	
+
+ul#footer-nav img {
+	width: 1.5em;
+}
+
+ul#footer-nav a:hover,
+ul#footer-nav a:focus, 
+ul#footer-nav a:active {
+	background: #4e7a92;
+}
+
+footer p {
+	text-align: right;
+}
+
+/** Navigation **/
+
+nav {
+	grid-area: nav;
+	order: 4;
+}
+
+nav#navigation{
+}
+	
+#navigation ul {
+    list-style-type: none;
+    width: 100%;
+	margin-bottom:30px;
+}
+
+#navigation ul li.first-child	{ border-top: 1px #DBDBDB solid; }#navigation ul li a {
+	display: block;
+    border-bottom: 1px solid #4e7a92;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    padding: 1em 35px;
+    text-decoration: none;
+	width: 13em; 
+}
+
+#navigation ul li a:before{
+	content:" ";
+	display:inline-block;
+	width:1em;
+	height:1em;
+	border-left:5px solid #4e7a92;;
+}	
+		
+nav a[aria-current=page]{
+ background: #aaa;
+}
+
+#navigation_unten td{
+text-align: center;
+padding :5px;
+}
+
+img{
+max-width:100%;
+height:auto;
+}
+
+#buch_klein{
+width:25%;
+border:none;
+float:left;
+margin-right:1em; 
+margin-bottom:1em;
+}
+
+table{
+  caption-align:left;
+  caption-side:bottom;
+  border-collapse: collapse;
+  table-layout: auto;
+  width: 100%;
+  border: 1px solid black;
+}
+
+th,td {
+  border: 1px solid black;
+  
+}
+tr:hover {background-color:#f8f8f8;}
+
+caption {
+    background-color: #f8f8f8; 
+    padding: 1em 0 1em 0;
+    margin-bottom: 1em;
+    text-align:left;
+}
+
+article {
+	grid-area: article;
+	order: 2;
+}
+
+aside {
+	grid-area: aside;
+	order: 3:
+}
+
+/* ========== repsonsives Grid-Layout ========== */
+
+/* mobile first - auf schmalen Bildschirmen wird alles untereinander platziert. */ 
+
+/* ab einer Breite von 50em haben zwei Spalten nebeneinander Platz: */
+@media (min-width: 50em) { 
+  main {
+    grid-template-columns: repeat(3, 1fr);
+ }
+ 
+  nav {
+    grid-row: 1 / 4;
+  } 
+
+  #intro {
+    grid-column: 2 / 4;
+    grid-row:    1 / 2;					
+  }
+
+  article {
+    grid-column: 2 / 4;
+  }    
+  
+   aside {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;	
+  }   
+  
+  .spalte {
+    grid-row:    2 / 3;					
+  }
+    
+  .spalte img {
+     width: 33%;
+  } 
+}
