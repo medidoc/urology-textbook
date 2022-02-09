@@ -246,7 +246,7 @@ margin-bottom:1em;
 }
 
 table{
-  caption-align:left;
+  text-align:left;
   caption-side:bottom;
   border-collapse: collapse;
   table-layout: auto;
