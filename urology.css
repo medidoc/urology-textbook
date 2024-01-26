@@ -112,3 +112,6 @@ aside {grid-area: aside;order: 3:}
   .spalte {grid-row: 2 / 3;}
   .spalte img {width: 33%;} 
 }
+#ad-footer {
+    min-height: 260px;
+}
