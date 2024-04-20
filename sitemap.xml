@@ -1258,7 +1258,10 @@
         <loc>https://www.urology-textbook.com/perioperative-antibiotic-prophylaxis.html</loc>
     </url>
     <url>
-        <loc>https://www.urology-textbook.com/nephroureterectomy.html</loc>
+        <loc>https://www.urology-textbook.com/open-nephroureterectomy.html</loc>
+    </url>
+    <url>
+        <loc>https://www.urology-textbook.com/laparoscopic-nephroureterectomy.html</loc>
     </url>
     <url>
         <loc>https://www.urology-textbook.com/upper-tract-urothelial-cancer.html</loc>
@@ -1445,6 +1448,12 @@
     </url>
     <url>
     <loc>https://www.urology-textbook.com/retroperitoneoscopic-nephrectomy.html</loc>
+    </url>
+    <url>
+    <loc>https://www.urology-textbook.com/laparoscopic-partial-nephrectomy.html</loc>
+    </url>
+    <url>
+    <loc>https://www.urology-textbook.com/percutaneous-nephrolithotomy.html</loc>
     </url>
 </urlset>
 
