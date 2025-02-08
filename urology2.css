@@ -1,0 +1,245 @@
+html {box-sizing: border-box;background: #fff;} 
+
+/* lato-300 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: url('lato-v24-latin-300.woff2') format('woff2'); 
+}
+/* lato-300italic - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 300;
+  src: url('lato-v24-latin-300italic.woff2') format('woff2');
+}
+/* lato-regular - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url('lato-v24-latin-regular.woff2') format('woff2');
+}
+/* lato-italic - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: url('lato-v24-latin-italic.woff2') format('woff2'); 
+}
+/* lato-700 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: url('lato-v24-latin-700.woff2') format('woff2'); 
+}
+/* lato-700italic - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: url('lato-v24-latin-700italic.woff2') format('woff2'); 
+}
+
+body {
+	max-width: 1000px;
+	margin:0 auto;
+	padding: 0;
+	background: #fff;	
+	color: #191718; 
+	font-family: "Avenir Next", "Lato", "Arial", sans-serif;
+    font-size: 1.2em;}
+header {
+    width: calc(100% - 120px);
+    max-width: 800px;
+    margin: 0px auto;
+	height: 300px;
+    font-size:1.8em;
+	background: #fff url("urologie-titel.jpg") no-repeat; 
+	background-size: cover; 			 
+	grid-area: header;
+	order: 1;}
+header a p {font-weight: 400; color: #fff;padding-left: 1em; padding-top: 0.5em}
+header a:hover, 
+header a:focus {color: tomato;text-decoration: none;}
+
+main {
+	display: inline;	 
+   	grid-template-areas: "header" "article" "nav" "aside" "footer" ;}
+h1{border-top:3px solid #ccc;border-bottom:3px solid #ccc;color:#666;font-size:1.6em;font-weight:400;padding:0.3em;margin:2em 0 2em}
+h2{border-bottom:2px solid #ccc;color:#666;font-size:1.4em;font-weight:400;padding:0.2em;margin:1.5em 0 1.5em}
+h3{border-bottom:1px solid #ccc;color:#666;font-weight:400;padding:0.1em;margin:1em 0 1em}
+h4{color:#666;font-size:1.2em;font-weight:400;padding:0.1em;margin:0.1em; 0 0.1em;}
+h5,h6{color:#666;font-size:1em;font-weight:400;padding:0.1em;margin:0.1em; 0 0.1em;}
+p {text-align:left;line-height:1.5em;padding: 0 0 0.2em 0;}
+p strong {font-weight: 400;font-style: italic;}
+p b {font-weight: 400;font-style: italic;}
+#brotkrumen{padding:0.2em 0 0.2em 0;background-color:#f8f8f8;}
+
+ul {line-height: 1.5em;}
+a {color: #0A62D0;outline: none;text-decoration: none;}
+a:hover, 
+a:focus {color: white; 	text-decoration: none;background-color: #9dc0ec;}
+dl.grid {display: grid;grid-template-columns: 1fr 100%;}
+dd {margin: 0;padding-left: 1em;}
+dd span:first-child {display: inline-block;width: 4em;}
+dl.grid dd {margin-bottom: 1em;}
+ul#footer-nav li {list-style-type: none;display: inline;padding: 0 0.5em;border-right: 1px  solid #ACACAC;}
+footer {
+    width: calc(100% - 120px);
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 1em;
+    background-color:#f8f8f8;
+    grid-area: footer;
+    order: 5;}
+ul#footer-nav  li:last-child {border: none;}	
+ul#footer-nav img {width: 1.5em;}
+ul#footer-nav a:hover,
+ul#footer-nav a:focus, 
+ul#footer-nav a:active {background: #0A62D0;}
+footer p {text-align: right;}
+nav {grid-area: nav;order: 2;}
+
+#menuToggle
+{
+  display: block;
+  position: fixed;
+  top: 150px;
+  left: 20px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: white;
+}	
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+    opacity: 0; 
+  z-index: 2;  
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #232323;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  max-width: 300px;
+  width: 100vw;
+  max-height: 100vh;
+  margin: -100px 0 0 -50px;
+  padding: 100px;
+  padding-top: 100px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 5px 0;
+  font-size: 1em;
+}
+
+#menu li label
+{
+  cursor: pointer;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+#navigation_unten td{text-align: center;padding :5px;}
+img{max-width:100%;height:auto;}
+#buch_klein{width:150px;height:208px;border:none;float:left;margin-right:1em;margin-bottom:1em;}
+table{caption-side:bottom;border-collapse: collapse;table-layout: auto;border: 1px solid black;}
+th,td {border: 1px solid black;padding: 3px;}
+tr:hover {background-color:#f8f8f8;}
+caption {background-color: #f8f8f8;padding: 1em 0 1em 0;margin-bottom: 1em;text-align:left;}
+caption strong {font-weight: 400; font-style: italic;}
+article {
+    width: calc(100% - 120px);
+    max-width: 800px;
+    margin: 100px auto;
+    grid-area: article;
+    order: 3;}
+aside {grid-area: aside;order: 4:}
+#ad-footer {
+    min-height: 260px;
+}
