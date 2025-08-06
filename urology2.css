@@ -70,7 +70,6 @@ header {
 header a p {text-align: center; font-weight: 400; color: #fff;padding-left: 1em; padding-top: 1em}
 header a:hover, 
 header a:focus {color: tomato;text-decoration: none;}
-
 main {
 	display: inline;	 
    	grid-template-areas: "header" "article" "nav" "aside" "footer" ;}
