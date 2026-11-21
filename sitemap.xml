@@ -516,9 +516,6 @@
       <loc>https://www.urology-textbook.com/supernumerary-kidney.html</loc>
     </url>
     <url>
-      <loc>https://www.urology-textbook.com/cystitis-cystica.html</loc>
-    </url>
-    <url>
       <loc>https://www.urology-textbook.com/perineal-surgery.html</loc>
     </url>
     <url>
@@ -1102,6 +1099,9 @@
     <loc>https://www.urology-textbook.com/fever.html</loc>
     </url>
     <url>
+    <loc>https://www.urology-textbook.com/diarrhea.html</loc>
+    </url>
+    <url>
     <loc>https://www.urology-textbook.com/physical-examination.html</loc>
     </url>
     <url>
@@ -1247,6 +1247,9 @@
     </url>
     <url>
         <loc>https://www.urology-textbook.com/upper-tract-urothelial-cancer.html</loc>
+    </url>
+    <url>
+    <loc>https://www.urology-textbook.com/vesicoureteral-reflux.html</loc>
     </url>
     <url>
     <loc>https://www.urology-textbook.com/bladder-cancer.html</loc>
@@ -1667,6 +1670,9 @@
 	</url>
 	<url>
 	    <loc>https://www.urology-textbook.com/other-benign-renal-tumors.html</loc>
+	</url>
+	<url>
+	    <loc>https://www.urology-textbook.com/benign-bladder-tumors.html</loc>
 	</url>
 </urlset>
 
